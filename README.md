@@ -13,7 +13,7 @@ You will be able to:
 * Calculate Euclidean Distance between 2 points
 * Compare and contrast Manhattan, Euclidean, and Minkowski Distance
 
-### The Relationship Between Similarity and Distance
+## The Relationship Between Similarity and Distance
 
 In this section, we'll be focusing on a foundational **_Supervised Learning_** algorithm, **_K-Nearest Neighbors_**, or **_KNN_** for short. In order to understand how this algorithm works, we first have to understand some **_Distance Metrics_**, and we can use them to tell us how similar two objects are. 
 
@@ -24,10 +24,7 @@ The assumption that distance-based classifiers like KNN are built on is that **_
 You might remember learning about how to calculate the distance between two points on a cartesian plane from school. That's a certainly an important distance metric that we'll be using--however, there is more than one distance metric we can use, and all of them can be useful depending on the context of the problem.  In this lesson, we'll learn how to calculate different distance metrics so that we have a tool to evaluate how similar or different data points are from one another when we begin exploring the KNN algorithm!
 
 
-
-
-
-### Manhattan Distance
+## Manhattan Distance
 
 The first (and easiest) distance metric we'll cover is **_Manhattan Distance_**.  Manhattan distance is aptly named, because it measures the distance from one point to another traveling along the axes of a grid. Take a look at the following image:
 
@@ -63,11 +60,11 @@ for i in range(3):
     manhattan_distance += np.abs(point_1[i] - point_2[i]) # 7
 ```
 
-#### A Hint on Turning Mathematical Notation Into Code
+### A Hint on Turning Mathematical Notation Into Code
 
 Anytime you see mathematical notation that includes the $\sum$ symbol, this can reliably be represented as a for loop! The math to the right of the symbol tells us what the body of our for loop should look like (what unique things we're doing in each given step).  Similarly, the numbers on the bottom and top of the $\sum$ sign tell us our starting and stopping indexes, respectively. In the case of the Manhattan Distance equation above, the $n$ means "length n", the length of the entire number of dimensions, because we want to count them all in our calculations. **_NOTE_**: Be careful interpreting the starting dimensions! Remember that although mathematicians start counting at 1, computer scientists start counting at 0! Whereas from a mathematical perspective, we are starting at dimension 1 and counting up to and including dimension 3, in our code, we start at dimension 0 and count up to and including dimension 2. 
 
-### Euclidean Distance
+## Euclidean Distance
 
 The next distance metric we'll cover is **_Euclidean Distance_**, although you may also have heard it referred to as **_Pythagorean Distance_**.  The equation at the heart of this one is probably familiar to you: $a^2 + b^2 = c^2$, or the **_Pythagorean Theorem_**! Take a look at the diagram in the section above with all the colored lines on it. The green line measures the Euclidean Distance between the 2 points, by moving in a straight line. If we take the horizontal and vertical sections of the red line and treat them as $a$ and $b$, then we can easily use the Pythagorean Theorem to calculate the length of the green line to tell us the euclidean distance between the two points. 
 
@@ -76,7 +73,7 @@ In this case, that is:  $6^2 + 6^2 =  \sqrt{72} \approx 8.485$
 <img src='euclidean-distance.png'>
 
 
-#### Working With More Than 2 Dimensions
+### Working With More Than 2 Dimensions
 
 Just as with Manhattan Distance, we can generalize this equation to $n$ dimensions. We just add any extra dimensions in, same as we did with the first two. For instance, if we wanted to calculate the Euclidean Distance between 2 points in a 3-dimensional space, then our formula would just be $a^2 + b^2 + c^2 = d^2$, with $d$ being the Euclidean Distance.  
 
@@ -103,7 +100,7 @@ euclidean_distance = np.sqrt(euclidean_distance)
 euclidean_distance # 4.58257
 ```
 
-### Minkowski Distance
+## Minkowski Distance
 
 The final distance metric we'll talk about in this lesson is **_Minkowski Distance_**. This one is a bit technical, so try and bear with us here. Minkowski Distance is a generalized distance metric across a _Normed Vector Space_. A Normed Vector Space is just a fancy way of saying a collection of space where each point has been run through a function. It can be any function, as long it meets two criteria: the zero vector (just a vector filled with zeros) will output a length of 0, and every other vector must have a positive length. 
 
@@ -127,7 +124,9 @@ minkowski_distance_3 = np.cbrt((length_side_1 + length_side2 + ... length_side_n
 mink_distance_5 = np.power((length_side_1 + length_side2 + ... length_side_n)**5, 1./5)
 ```
 
-
 You'll often see Minkowski Distance used as a parameter for any distance-based machine learning algorithms inside sklearn.  This isn't a concept you'll have to worry about often, but it's definitely worth knowing about Minkowski Distance as a concept!
 
-Knowing what we now know about Minkowski Distance, and it's two special cases, Manhattan and Euclidean Distance, think about how you could write a generalized distance function that can calculate any of these, because it's exactly what we'll be doing in our next lab!
+
+## Summary 
+
+Knowing what we now know about Minkowski Distance, and its two special cases, Manhattan and Euclidean Distance, think about how you could write a generalized distance function that can calculate any of these, because it's exactly what we'll be doing in our next lab!
