@@ -34,7 +34,7 @@ In this image, all the lines except for the green line measure the Manhattan Dis
 
 The easiest way to remember Manhattan Distance is to use the analogy that provides this distance metric it's name--look at the picture above, but picture this grid as the famous grid of streets in Manhattan. If you were to take a taxi from point A (bottom left) to point b (top right), how many blocks east or west would the taxi have to travel? How many blocks north or south? How many blocks total?  By calculating the total number of blocks we have to drive, we're actually calculating the Manhattan Distance between point A and point B.  
 
-So far, we've been talking about Manhattan Distance in a 2-dimensional space.  However, all of the distance metrics we're going to learn can generalize to an n-dimensional space.  For instance, in 3 dimensions, it's no harder to calculate the distance from one square on a Rubik's Cube to any other square--all we do is take into account how many squares we need to towards or away from ourselves to measure depth, as well as left/right and up/down. Once we know the total units we need to move in each of these 3 dimensions, we just sum them to calculate the Manhattan Distance in 3 dimensions. 
+So far, we've been talking about Manhattan Distance in a 2-dimensional space.  However, all of the distance metrics we're going to learn can generalize to an n-dimensional space.  For instance, in 3 dimensions, it's no harder to calculate the distance from one square on a Rubik's Cube to any other square--all we do is take into account how many squares we need to move towards or away from ourselves to measure depth, as well as left/right and up/down. Once we know the total units we need to move in each of these 3 dimensions, we just sum them to calculate the Manhattan Distance in 3 dimensions. 
 
 Here's the formula for Manhattan Distance:
 
@@ -106,7 +106,7 @@ The final distance metric we'll talk about in this lesson is **_Minkowski Distan
 
 Don't worry too much about the specifics of the mathematical definition above--on it's own, that's not something you should probably understand unless your a mathematician. Instead, we can gain an intuition for what Minkowski Distance actually measures another way.  Both Manhattan Distance and Euclidean Distance are actually _special cases of Minkowski Distance_. Let's compare and contrast all 3 formulas and see if we can find the common thread:
 
-<img src='minkowski-equation.png'>
+<img src='minkowski-equation.png' width='300px'>
 
 Do you see it? It's the exponent!  In this case, the function is just an exponent. If we were to define a value for the exponent, we could say that:
 
@@ -130,3 +130,8 @@ You'll often see Minkowski Distance used as a parameter for any distance-based m
 ## Summary 
 
 Knowing what we now know about Minkowski Distance, and its two special cases, Manhattan and Euclidean Distance, think about how you could write a generalized distance function that can calculate any of these, because it's exactly what we'll be doing in our next lab!
+
+
+```python
+
+```
