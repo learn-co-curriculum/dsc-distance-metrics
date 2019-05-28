@@ -17,7 +17,7 @@ You will be able to:
 
 In this section, we'll be focusing on a foundational **_Supervised Learning_** algorithm, **_K-Nearest Neighbors_**, or **_KNN_** for short. In order to understand how this algorithm works, we first have to understand some **_Distance Metrics_**, and we can use them to tell us how similar two objects are. 
 
-<img src='knn.png'>
+<img src='images/knn.png'>
 
 The assumption that distance-based classifiers like KNN are built on is that **_distance helps us quantify similarity_**.  Objects that are more alike are more likely to be the same class.  By treating each column in our dataset as a separate dimension, we can plot each data point that we have, and measure the distance between them! 
 
@@ -28,7 +28,7 @@ You might remember learning about how to calculate the distance between two poin
 
 The first (and easiest) distance metric we'll cover is **_Manhattan Distance_**.  Manhattan distance is aptly named, because it measures the distance from one point to another traveling along the axes of a grid. Take a look at the following image:
 
-<img src='manhattan-distance.png' neight=60% width=60%>
+<img src='images/manhattan-distance.png' neight=60% width=60%>
 
 In this image, all the lines except for the green line measure the Manhattan Distance between the two points.  You'll notice that if you start from the point in the bottom left corner of the grid and count the number of units moved in the X dimension (left and right) and the number of units moved in the Y dimension (up and down), the distance is the for the red, blue, and yellow lines. 
 
@@ -38,7 +38,7 @@ So far, we've been talking about Manhattan Distance in a 2-dimensional space.  H
 
 Here's the formula for Manhattan Distance:
 
-<img src='manhattan-equation.png' height=60% width=60%>
+<img src='images/manhattan-equation.png' height=60% width=60%>
 
 Let's break this formula down a bit. 
 
@@ -70,7 +70,7 @@ The next distance metric we'll cover is **_Euclidean Distance_**, although you m
 
 In this case, that is:  $6^2 + 6^2 =  \sqrt{72} \approx 8.485$
 
-<img src='euclidean-distance.png'>
+<img src='images/euclidean-distance.png'>
 
 
 ### Working With More Than 2 Dimensions
@@ -79,7 +79,7 @@ Just as with Manhattan Distance, we can generalize this equation to $n$ dimensio
 
 Let's take a look at the Euclidean Distance formula:
 
-<img src='euclidean-equation.png'>
+<img src='images/euclidean-equation.png'>
 
 This is a straightforward equation--for dimension, we subract one point's value from the other's to get the length of that "side" of the triangle in that dimension, square it, and add it to our running total. The square root of that running total is our Euclidean Distance. 
 
@@ -106,7 +106,7 @@ The final distance metric we'll talk about in this lesson is **_Minkowski Distan
 
 Don't worry too much about the specifics of the mathematical definition above--on it's own, that's not something you should probably understand unless your a mathematician. Instead, we can gain an intuition for what Minkowski Distance actually measures another way.  Both Manhattan Distance and Euclidean Distance are actually _special cases of Minkowski Distance_. Let's compare and contrast all 3 formulas and see if we can find the common thread:
 
-<img src='minkowski-equation.png' width='300px'>
+<img src='images/minkowski-equation.png' width='300px'>
 
 Do you see it? It's the exponent!  In this case, the function is just an exponent. If we were to define a value for the exponent, we could say that:
 
@@ -130,8 +130,3 @@ You'll often see Minkowski Distance used as a parameter for any distance-based m
 ## Summary 
 
 Knowing what we now know about Minkowski Distance, and its two special cases, Manhattan and Euclidean Distance, think about how you could write a generalized distance function that can calculate any of these, because it's exactly what we'll be doing in our next lab!
-
-
-```python
-
-```
