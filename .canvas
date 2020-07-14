@@ -8,3 +8,7 @@
   :course_id: 154
   :canvas_url: https://learning.flatironschool.com/courses/154/assignments/5099
   :type: assignment
+- :id: 12647
+  :course_id: 346
+  :canvas_url: https://learning.flatironschool.com/courses/346/pages/dsc-distance-metrics
+  :type: page
